@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:EditAccount:index{% endblock %}
+
+{% block body %}
+{% for flashMessage in app.session.flashbag.get('notice') %}
+	{{ flashMessage }}
+{% endfor %}
+
+<h1>Edit account</h1>
+
+{{ form(form) }}
+
+{% endblock %}

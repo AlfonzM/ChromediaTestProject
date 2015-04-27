@@ -5,3 +5,7 @@ app:
 register:
     path:     /register
     defaults: { _controller: AppBundle:Registration:index }
+
+profile:
+    path:     /profile
+    defaults: { _controller: AppBundle:Profile:index }

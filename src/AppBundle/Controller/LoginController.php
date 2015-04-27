@@ -32,15 +32,25 @@ class LoginController extends Controller
 
 		    	if($p){
 		    		if(hash("sha256",$password) == $p->getPassword()){
-		    			echo 'Success! ' . $p->getFirstName() . ' ' . $p->getLastName();
+		    			echo 'Login successful!';
+
+		    			// session
+		    			$session = $request->getSession();
+		    			$session->set('user', $p);
+
+		    			// flash message
+		    			$this->addFlash('notice', 'Welcome back, ' . $p->getFirstName() . '!');
+
+		    			return $this->redirectToRoute('profile');
 		    		}
 		    		else{
-		    			echo 'Incorrect password';
+		    			$this->addFlash('notice', 'Incorrect password.');
 		    		}
 		    	}
 		    	else{
-		    		echo 'E-mail address not found.';
+		    		$this->addFlash('notice', 'Email not found.');
 		    	}
+
 
 		    	// echo $email . ' ' . $password;
 

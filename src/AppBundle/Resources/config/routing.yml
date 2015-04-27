@@ -2,3 +2,7 @@
 index:
     path:     /activation/{code}
     defaults: { _controller: AppBundle:Activation:index }
+
+index:
+    path:     /profile
+    defaults: { _controller: AppBundle:Profile:index }

@@ -2,9 +2,16 @@
 
 {% block title %}Login{% endblock %}
 
+
 {% block body %}
 <h1>Login</h1>
 
+{% for flashMessage in app.session.flashbag.get('notice') %}
+	<p>{{ flashMessage }}</p>
+{% endfor %}
+
 {{ form(form) }}
+
+<p><a href="#">Forgot password?</a></p>
 
 {% endblock %}
