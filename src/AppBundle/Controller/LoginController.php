@@ -25,7 +25,25 @@ class LoginController extends Controller
     			$email = $form->get('email')->getData();
     			$password = $form->get('password')->getData();
 
-    			// echo $email . ' ' . $password;
+		    	$em = $this->getDoctrine()->getManager();
+		    	$p = $em->getRepository('AppBundle:User')->findOneBy(array(
+		    		'email' => $email
+		    	));
+
+		    	if($p){
+		    		if(hash("sha256",$password) == $p->getPassword()){
+		    			echo 'Success! ' . $p->getFirstName() . ' ' . $p->getLastName();
+		    		}
+		    		else{
+		    			echo 'Incorrect password';
+		    		}
+		    	}
+		    	else{
+		    		echo 'E-mail address not found.';
+		    	}
+
+		    	// echo $email . ' ' . $password;
+
     		}
     	}
 

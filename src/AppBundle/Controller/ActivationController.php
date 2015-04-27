@@ -17,7 +17,6 @@ class ActivationController extends Controller
 
     	$email = 'm.alfonz@gmail.com';
 
-    	// $em = $this->getDoctrine()->getRepository('AcmeDemoBundle:Person');
     	$em = $this->getDoctrine()->getManager();
     	$p = $em->getRepository('AppBundle:User')->findOneBy(array(
     		'activation' => $code
