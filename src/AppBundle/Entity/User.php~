@@ -1,0 +1,58 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
+/**
+ * @ORM\Entity
+ * @UniqueEntity(fields="email", message="Email already taken")
+ */
+class User{
+	/**
+	 * @ORM\Column(type="integer")
+	 * @ORM\Id
+	 * @ORM\GeneratedValue(strategy="AUTO")
+	 */
+	protected $id;
+
+	/**
+     * @ORM\Column(type="string", length=255)
+	 * @Assert\NotBlank()
+	 * @Assert\Email()
+	 */
+	protected $email;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min = 6, max = 4096,
+     * minMessage="Your password should be at least 6 chacters long.",
+     * maxMessage="Your password cannot be more than 4096 characters long." )
+     */
+    protected $password;
+
+	/**
+     * @ORM\Column(type="string", length=255)
+	 * @Assert\NotBlank()
+	 */
+	protected $firstName;
+
+	/**
+     * @ORM\Column(type="string", length=255)
+	 * @Assert\NotBlank()
+	 */
+	protected $lastName;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $activation;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    protected $isActive;
+}
