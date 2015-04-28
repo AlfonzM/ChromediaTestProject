@@ -25,7 +25,7 @@ You can also change your password on the `Change Password` link.
 
 ## Forgot Password (TPFND-6)
 
-At the `Login` page, Click on the `Forgot password?` link to reset your password.
+At the `Login` page, click on the `Forgot password?` link to reset your password. Enter your e-mail address and a reset password link will be sent. Open the link to enter a new password.
 
 ## Email activation (TPFND-7)
 
