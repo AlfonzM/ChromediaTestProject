@@ -17,9 +17,19 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">
-            {% block body %}{% endblock %}
-            {% block javascripts %}{% endblock %}
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('login') }}">Chromedia Test Project</a>
+            </div>
         </div>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        
+        {% block javascripts %}{% endblock %}
     </body>
 </html>
