@@ -13,7 +13,7 @@ class ActivationController extends Controller
      */
     public function indexAction($code)
     {
-    	$secret = 'aabbccdd123';
+    	// $secret = 'aabbccdd123';
 
     	$em = $this->getDoctrine()->getManager();
     	$p = $em->getRepository('AppBundle:User')->findOneBy(array(

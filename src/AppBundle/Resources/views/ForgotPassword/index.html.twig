@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:ForgotPassword:index{% endblock %}
+
+{% block body %}
+<h1>Forgot password</h1>
+
+
+{% if app.session.flashbag.has('success') %}
+	<div class="alert alert-success" role="alert">
+		{% for flashMessage in app.session.flashbag.get('success') %}
+			{{ flashMessage }}
+		{% endfor %}
+	</div>
+{% else %}
+	{% if app.session.flashbag.has('notice') %}
+		<div class="alert alert-danger" role="alert">
+			{% for flashMessage in app.session.flashbag.get('notice') %}
+				{{ flashMessage }}
+			{% endfor %}
+		</div>
+	{% endif %}
+	{{ form(form) }}
+{% endif %}
+
+{% endblock %}

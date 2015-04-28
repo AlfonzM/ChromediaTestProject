@@ -50,10 +50,6 @@ class LoginController extends Controller
 		    	else{
 		    		$this->addFlash('notice', 'Email not found.');
 		    	}
-
-
-		    	// echo $email . ' ' . $password;
-
     		}
     	}
 

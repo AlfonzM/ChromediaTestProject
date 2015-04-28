@@ -1,0 +1,29 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Reset password{% endblock %}
+
+{% block body %}
+<h1>Reset password</h1>
+
+{% if app.session.flashbag.has('success') %}
+	<div class="alert alert-success" role="alert">
+		{% for flashMessage in app.session.flashbag.get('success') %}
+			{{ flashMessage }}
+		{% endfor %}
+	</div>
+	<a href="#">Login</a>
+{% else %}
+	{% if app.session.flashbag.has('error') %}
+		<div class="alert alert-danger" role="alert">
+			{% for flashMessage in app.session.flashbag.get('error') %}
+				{{ flashMessage }}
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if form is defined %}
+		{{ form(form) }}
+	{% endif %}
+{% endif %}
+
+
+{% endblock %}

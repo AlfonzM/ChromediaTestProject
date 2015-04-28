@@ -4,11 +4,14 @@
 
 {% block body %}
 
-{% for flashMessage in app.session.flashbag.get('notice') %}
-	{{ flashMessage }}
-{% endfor %}
+	<h1>Profile page</h1>
 
-<h1>Profile page</h1>
-<p><a href="{{ path('editaccount') }}">Edit account</a></p>
-<p><a href="{{ path('changepass') }}">Change password</a></p>
+	{% for flashMessage in app.session.flashbag.get('notice') %}
+		<div class="alert alert-success" role="alert">
+			{{ flashMessage }}
+		</div>
+	{% endfor %}
+
+	<p><a href="{{ path('editaccount') }}">Edit account</a></p>
+	<p><a href="{{ path('changepass') }}">Change password</a></p>
 {% endblock %}

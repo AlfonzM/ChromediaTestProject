@@ -7,11 +7,18 @@
 <h1>Login</h1>
 
 {% for flashMessage in app.session.flashbag.get('notice') %}
-	<p>{{ flashMessage }}</p>
+	<div class="alert alert-danger" role="alert">
+		<p>{{ flashMessage }}</p>
+	</div>
+{% endfor %}
+
+{% for flashMessage in app.session.flashbag.get('success') %}
+	<div class="alert alert-success" role="alert">
+		<p>{{ flashMessage }}</p>
+	</div>
 {% endfor %}
 
 {{ form(form) }}
 
-<p><a href="#">Forgot password?</a></p>
-
+<p><a href="{{ path('forgot') }}">Forgot password?</a></p>
 {% endblock %}

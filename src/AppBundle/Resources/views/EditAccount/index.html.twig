@@ -2,15 +2,18 @@
 
 {% block title %}AppBundle:EditAccount:index{% endblock %}
 
+
 {% block body %}
-{% for flashMessage in app.session.flashbag.get('notice') %}
-	{{ flashMessage }}
-{% endfor %}
+	<h1>Edit account</h1>
+	{% for flashMessage in app.session.flashbag.get('notice') %}
+		<div class="alert alert-warning" role="alert">
+			{{ flashMessage }}
+		</div>
+	{% endfor %}
 
-<h1>Edit account</h1>
 
-{{ form(form) }}
+	{{ form(form) }}
 
-<p><a href="{{ path('profile') }}">Go back.</a></p>
+	<p><a href="{{ path('profile') }}">Go back.</a></p>
 
 {% endblock %}

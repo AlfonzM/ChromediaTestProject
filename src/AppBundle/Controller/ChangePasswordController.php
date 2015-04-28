@@ -19,7 +19,6 @@ class ChangePasswordController extends Controller
     {
     	$request = $this->get('request');
     	$session = $request->getSession();
-
     	$form = $this->createForm(new ChangePassType());
     	$form->handleRequest($request);
 
