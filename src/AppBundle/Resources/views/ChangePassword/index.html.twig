@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Change Password{% endblock %}
+
+{% block body %}
+	{% for flashMessage in app.session.flashbag.get('notice') %}
+		{{ flashMessage }}
+	{% endfor %}
+
+	<h1>Change password</h1>
+
+	{{ form(form) }}
+
+	<p><a href="{{ path('profile') }}">Go back.</a></p>
+{% endblock %}
