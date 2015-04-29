@@ -1,0 +1,37 @@
+{% block form_row %}
+{% spaceless %}
+	<form class="form-inline">
+		<div class="form-group">
+	        <label>{{ form_label(form) }}&nbsp;</label>
+	        {{ form_errors(form) }}
+	        {{ form_widget(form) }}
+	    </div>
+    </form>
+{% endspaceless %}
+{% endblock form_row %}
+
+{% block form_widget_simple %}
+    {% set type = type|default('text') %}
+    <input class="form-control" type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+{% endblock form_widget_simple %}
+
+
+{%- block button_widget -%}
+    {%- if label is empty -%}
+        {%- if label_format is not empty -%}
+            {% set label = label_format|replace({
+                '%name%': name,
+                '%id%': id,
+            }) %}
+        {%- else -%}
+            {% set label = name|humanize %}
+        {%- endif -%}
+    {%- endif -%}
+    <button type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
+{%- endblock button_widget -%}
+
+
+{%- block submit_widget -%}
+    {%- set type = type|default('submit') -%}
+    {{ block('button_widget') }}
+{%- endblock submit_widget -%}
