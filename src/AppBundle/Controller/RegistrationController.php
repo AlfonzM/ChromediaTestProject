@@ -19,6 +19,12 @@ class RegistrationController extends Controller
     	$request = $this->get('request');
     	$form->handleRequest($request);
 
+        $session = $request->getSession();
+        if($session->get('user')){
+            echo 'You are already logged in.<br>';
+            return $this->redirectToRoute('profile');
+        }
+
         // if request post
     	if($request->getMethod() == 'POST'){
     		if($form->isValid()){

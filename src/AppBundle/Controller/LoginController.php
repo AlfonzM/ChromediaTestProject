@@ -6,6 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use AppBundle\Form\LoginType;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\BrowserKit\Response;
+
 
 class LoginController extends Controller
 {
@@ -19,6 +22,12 @@ class LoginController extends Controller
 
     	$request = $this->get('request');
     	$form->handleRequest($request);
+		$session = $request->getSession();
+
+		if($session->get('user')){
+			echo 'You are already logged in.<br>';
+			return $this->redirectToRoute('profile');
+		}
 
     	if($request->getMethod() == 'POST'){
     		if($form->isValid()){
@@ -34,8 +43,7 @@ class LoginController extends Controller
 		    		if(hash("sha256",$password) == $p->getPassword()){
 		    			echo 'Login successful!';
 
-		    			// session
-		    			$session = $request->getSession();
+		    			$session->start();
 		    			$session->set('user', $p);
 
 		    			// flash message

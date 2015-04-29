@@ -19,6 +19,7 @@
 {% endfor %}
 
 {{ form(form) }}
-
-<p><a href="{{ path('forgot') }}">Forgot password?</a></p>
+<br>
+<a href="{{ path('forgot') }}">Forgot password?</a><br>
+<a href="{{ path('register') }}">Don't have an account? Sign up!</a>
 {% endblock %}

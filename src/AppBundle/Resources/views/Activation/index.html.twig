@@ -3,4 +3,16 @@
 {% block title %}E-mail activation{% endblock %}
 
 {% block body %}
+<h1>E-mail activation</h1>
+{% for flashMessage in app.session.flashbag.get('notice') %}
+	<div class="alert alert-danger" role="alert">
+		<p>{{ flashMessage }}</p>
+	</div>
+{% endfor %}
+
+{% for flashMessage in app.session.flashbag.get('success') %}
+	<div class="alert alert-success" role="alert">
+		<p>{{ flashMessage }}</p>
+	</div>
+{% endfor %}
 {% endblock %}

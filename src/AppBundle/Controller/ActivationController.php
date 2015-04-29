@@ -22,12 +22,13 @@ class ActivationController extends Controller
 
     	if($p){
     		if($p->getIsActive() == 0){
-    			echo 'You have successfully activated your account. Welcome, ' . $p->getFirstName() . '!';
+    			$this->addFlash('success', 'You have successfully activated your account. Welcome, ' . $p->getFirstName() . '!');
     			$p->setIsActive(true);
     			$em->flush();
     		}
     		else{
-    			echo 'Your account is already activated.';
+    			$this->addFlash('notice', 'Your account is already activated.');
+                return $this->redirectToRoute('login');
     		}
 
             $form = $this->createForm(new LoginType());
@@ -37,7 +38,7 @@ class ActivationController extends Controller
 
     	}
     	else{
-    		echo 'Account activation failed.';
+    		$this->addFlash('notice', 'Account activation failed.');
     	}
 
         return $this->render('AppBundle:Activation:index.html.twig');
