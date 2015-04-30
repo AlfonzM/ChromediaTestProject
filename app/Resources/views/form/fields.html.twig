@@ -1,37 +1,40 @@
+<!-- form -->
+{% block form %}
+    {{ form_start(form, {'attr':{'class':'form-inline'}} ) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock form %}
+
+<!-- form row -->
 {% block form_row %}
-{% spaceless %}
-	<form class="form-inline">
-		<div class="form-group">
-	        <label>{{ form_label(form) }}&nbsp;</label>
-	        {{ form_errors(form) }}
-	        {{ form_widget(form) }}
-	    </div>
-    </form>
-{% endspaceless %}
+    <p><div class="form-group">
+        {{ form_label(form, '',{'label_attr':{'class':'control-label'}}) }}<br>
+        {{ form_widget(form, {'attr':{'class':'form-control'}}) }}{{ form_errors(form) }}<br>
+    </div></p>
 {% endblock form_row %}
 
+<!-- errors -->
+{% block form_errors %}
+    {% spaceless %}
+        {% if errors|length > 0 %}
+            {% for error in errors %}
+                <span class="label label-danger">{{ error.message }}</span>
+            {% endfor %}
+        {% endif %}
+    {% endspaceless %}
+{% endblock form_errors %}
+
+<!-- form widget -->
 {% block form_widget_simple %}
     {% set type = type|default('text') %}
     <input class="form-control" type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
 {% endblock form_widget_simple %}
 
-
-{%- block button_widget -%}
-    {%- if label is empty -%}
-        {%- if label_format is not empty -%}
-            {% set label = label_format|replace({
-                '%name%': name,
-                '%id%': id,
-            }) %}
-        {%- else -%}
-            {% set label = name|humanize %}
-        {%- endif -%}
-    {%- endif -%}
-    <button type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
-{%- endblock button_widget -%}
-
-
-{%- block submit_widget -%}
-    {%- set type = type|default('submit') -%}
-    {{ block('button_widget') }}
-{%- endblock submit_widget -%}
+<!-- button row -->
+{% block button_row %}
+    {% spaceless %}
+        <div>
+            {{ form_widget(form, {'attr':{'class':'btn btn-primary'}}) }}
+        </div>
+    {% endspaceless %}
+{% endblock button_row %}

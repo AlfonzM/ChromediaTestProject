@@ -5,11 +5,12 @@
 {% block body %}
 <h1>Sign up</h1>
 
-{{ form_start(form) }}
+{{ form_start(form, {'attr' : {'class' : 'form-inline'}}) }}
 	{{ form_row(form.firstName) }}
 	{{ form_row(form.lastName) }}
 	{{ form_row(form.email) }}
 	{{ form_row(form.password) }}
+	{{ form_row(form.submit) }}
 {{ form_end(form) }}
 
 <br>

@@ -14,7 +14,7 @@ class UserType extends AbstractType
         $builder->add('lastName', 'text');
         $builder->add('password', 'repeated', array(
             'first_name' => 'password',
-            'second_name' => 'confirm',
+            'second_name' => 'confirm_password',
             'type' => 'password',
         ));
         $builder->add('submit', 'submit');
