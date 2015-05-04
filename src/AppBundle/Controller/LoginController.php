@@ -39,8 +39,14 @@ class LoginController extends Controller
 		    		'email' => $email
 		    	));
 
+		    	// email exists
 		    	if($p){
-		    		if(hash("sha256",$password) == $p->getPassword()){
+		    		// account not activated
+		    		if($p->getIsActive() == 0){
+		    			$this->addFlash('notice', 'Your account has not yet been activated. Please check your email.');
+		    		}
+		    		// email and pass is correct
+		    		else if(hash("sha256",$password) == $p->getPassword()){
 		    			echo 'Login successful!';
 
 		    			$session->start();
@@ -51,10 +57,12 @@ class LoginController extends Controller
 
 		    			return $this->redirectToRoute('profile');
 		    		}
+		    		// incorrect password
 		    		else{
 		    			$this->addFlash('notice', 'Incorrect password.');
 		    		}
 		    	}
+		    	// email doesnt exist
 		    	else{
 		    		$this->addFlash('notice', 'Email not found.');
 		    	}
