@@ -55,7 +55,8 @@ class ForgotPasswordController extends Controller
 				                'Emails/resetpassword.html.twig',
 				                array(
 				                	'name' => $p->getFirstName(),
-				                	'token' => $token->getToken()
+				                	'token' => $token->getToken(),
+                                    'host' => $_SERVER['HTTP_HOST']
 				                )),
 					            'text/html'
 				        )

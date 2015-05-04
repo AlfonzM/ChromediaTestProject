@@ -58,7 +58,11 @@ class RegistrationController extends Controller
 			            $this->renderView(
 			                // app/Resources/views/Emails/registration.html.twig
 			                'Emails/registration.html.twig',
-			                array('name' => $firstName, 'activationcode' => $person->getActivation())
+			                array(
+                                'name' => $firstName,
+                                'activationcode' => $person->getActivation(),
+                                'host' => $_SERVER['HTTP_HOST']
+                            )
 			            ),
 			            'text/html'
 			        )

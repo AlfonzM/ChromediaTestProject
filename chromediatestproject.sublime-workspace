@@ -96,18 +96,42 @@
 	"buffers":
 	[
 		{
-			"file": "src/AppBundle/Controller/LoginController.php",
+			"file": "src/AppBundle/Resources/views/Registration/index.html.twig",
 			"settings":
 			{
-				"buffer_size": 1776,
+				"buffer_size": 440,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/AppBundle/Resources/views/Login/index.html.twig",
+			"file": "src/AppBundle/Resources/views/ChangePassword/index.html.twig",
 			"settings":
 			{
-				"buffer_size": 699,
+				"buffer_size": 372,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Resources/views/form/fields.html.twig",
+			"settings":
+			{
+				"buffer_size": 1244,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/AppBundle/Form/UserType.php",
+			"settings":
+			{
+				"buffer_size": 682,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/AppBundle/Entity/User.php",
+			"settings":
+			{
+				"buffer_size": 3446,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,9 +147,13 @@
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
 	{
-		"height": 327.0,
+		"height": 47.0,
 		"selected_items":
 		[
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
 			[
 				"wo",
 				"Word Wrap: Toggle"
@@ -259,7 +287,7 @@
 				"HTML: Encode Special Characters"
 			]
 		],
-		"width": 449.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -276,13 +304,20 @@
 	},
 	"file_history":
 	[
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Entity/User.php~",
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/Login/index.html.twig",
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/app/Resources/views/base.html.twig",
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/app/Resources/views/form/fields.html.twig",
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Form/UserType.php",
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/Registration/index.html.twig",
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Form/LoginType.php",
+		"/Users/AlfonzM/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/vendor/composer/installed.json",
+		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Controller/LoginController.php",
+		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/data.txt",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/Index/index.html.twig",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/app/AppKernel.php",
-		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Controller/LoginController.php",
-		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/Registration/index.html.twig",
-		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/Login/index.html.twig",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Controller/ActivationController.php",
-		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/app/Resources/views/base.html.twig",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Controller/LogoutController.php",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/Activation/index.html.twig",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/Logout/logout.html.twig",
@@ -292,7 +327,6 @@
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/skeleton/bundle/index.html.twig.twig",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/SessionLogoutHandler.php",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/vendor/symfony/symfony/src/Symfony/Component/BrowserKit/Response.php",
-		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/app/Resources/views/form/fields.html.twig",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Controller/ProfileController.php",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Controller/ForgotPasswordController.php",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/vendor/doctrine/doctrine-bundle/Controller/ProfilerController.php",
@@ -315,13 +349,10 @@
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Entity/PasswordResetToken",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/EditAccount/index.html.twig",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/app/Resources/views/Emails/registration.html.twig",
-		"/Users/AlfonzM/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/config/routing.yml",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/Profile/index.html.twig",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Resources/views/ChangePassword/index.html.twig",
-		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Form/UserType.php",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Controller/EditAccountController.php",
-		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Form/LoginType.php",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Form/ChangePassType",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/src/AppBundle/Form/EditType.php",
 		"/Users/AlfonzM/Documents/Work/Chromedia/symfony/testproject/app/config/routing.yml",
@@ -339,7 +370,6 @@
 		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/main.py",
 		"/Applications/MAMP/htdocs/chromedia-test/index.php",
 		"/Applications/MAMP/htdocs/chromedia-test/index.html",
-		"/Users/AlfonzM/Documents/Dev/Python/LDJam-Bot/data.txt",
 		"/Users/AlfonzM/Documents/Work/angular/helloworld/index.html",
 		"/Users/AlfonzM/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/AlfonzM/Library/Application Support/Sublime Text 2/Packages/User/OpenSafari.sublime-build",
@@ -419,6 +449,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=5556",
 			"session",
 			"form",
 			"redirectToRoute",
@@ -514,54 +545,138 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/AppBundle/Controller/LoginController.php",
+					"file": "src/AppBundle/Resources/views/Registration/index.html.twig",
 					"settings":
 					{
-						"buffer_size": 1776,
+						"buffer_size": 440,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								892,
-								892
+								318,
+								318
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP-Twig/HTML (Twig).tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 80.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/AppBundle/Resources/views/Login/index.html.twig",
+					"file": "src/AppBundle/Resources/views/ChangePassword/index.html.twig",
 					"settings":
 					{
-						"buffer_size": 699,
+						"buffer_size": 372,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								263,
-								263
+								372,
+								372
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP-Twig/HTML (Twig).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Resources/views/form/fields.html.twig",
+					"settings":
+					{
+						"buffer_size": 1244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1244,
+								1244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP-Twig/HTML (Twig).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/AppBundle/Form/UserType.php",
+					"settings":
+					{
+						"buffer_size": 682,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								641,
+								641
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/AppBundle/Entity/User.php",
+					"settings":
+					{
+						"buffer_size": 3446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -576,7 +691,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 5,
 					"file": "src/AppBundle/Controller/IndexController.php",
 					"settings":
 					{
@@ -632,7 +747,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.574357160433,
 			1.0
 		],
 		"rows":
@@ -657,8 +772,44 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"src/AppBundle/Entity/User.php~"
+			],
+			[
+				"usertype",
+				"src/AppBundle/Form/UserType.php"
+			],
+			[
+				"fields",
+				"app/Resources/views/form/fields.html.twig"
+			],
+			[
+				"base",
+				"app/Resources/views/base.html.twig"
+			],
+			[
 				"index.",
-				"src/AppBundle/Resources/views/Login/index.html.twig"
+				"src/AppBundle/Resources/views/ChangePassword/index.html.twig"
+			],
+			[
+				"index",
+				"src/AppBundle/Resources/views/Registration/index.html.twig"
+			],
+			[
+				"index.html.",
+				"src/AppBundle/Resources/views/Registration/index.html.twig"
+			],
+			[
+				"fields.",
+				"app/Resources/views/form/fields.html.twig"
+			],
+			[
+				"install",
+				"vendor/composer/installed.json"
+			],
+			[
+				"logintype",
+				"src/AppBundle/Form/LoginType.php"
 			],
 			[
 				"login",
@@ -697,10 +848,6 @@
 				"src/AppBundle/Resources/views/Activation/index.html.twig"
 			],
 			[
-				"index",
-				"src/AppBundle/Resources/views/Activation/index.html.twig"
-			],
-			[
 				"regist",
 				"src/AppBundle/Controller/RegistrationController.php"
 			],
@@ -723,10 +870,6 @@
 			[
 				"activation",
 				"src/AppBundle/Controller/ActivationController.php"
-			],
-			[
-				"base",
-				"app/Resources/views/base.html.twig"
 			],
 			[
 				"indexhtml",
@@ -791,10 +934,6 @@
 			[
 				"resetindex",
 				"src/AppBundle/Resources/views/ResetPassword/index.html.twig"
-			],
-			[
-				"user",
-				"src/AppBundle/Entity/User.php"
 			],
 			[
 				"changepass",
@@ -869,10 +1008,6 @@
 				"src/AppBundle/Resources/views/ChangePassword/index.html.twig"
 			],
 			[
-				"usertype",
-				"src/AppBundle/Form/UserType.php"
-			],
-			[
 				"routin",
 				"app/config/routing.yml"
 			],
@@ -895,10 +1030,6 @@
 			[
 				"config.yml",
 				"app/config/config.yml"
-			],
-			[
-				"logintype",
-				"src/AppBundle/Form/LoginType.php"
 			],
 			[
 				"activatioc",
